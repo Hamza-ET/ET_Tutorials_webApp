@@ -4,7 +4,7 @@ document.getElementById('noteForm').addEventListener('submit', function(event) {
     const title = document.getElementById('title').value;
     const content = document.getElementById('content').value;
 
-    const message = `*${title}*\n\n${content}\n\nView the notes online: Lecture Notes`;
+    const message = `https://Hamza-ET.github.io/ET_Tutorial_webApp/`;
 
     fetch('https://api.telegram.org/bot<7173102809:AAFTsggdavbeS1xF3KM1PqHs1Xegvb0rDns>/sendMessage', {
         method: 'POST',
@@ -13,7 +13,7 @@ document.getElementById('noteForm').addEventListener('submit', function(event) {
         },
         body: JSON.stringify({
             chat_id: '-1002236654606',
-            text: 'https://<Hamza-ET>.github.io/<ET_Tutorial_webApp>/',
+            text: message,
             parse_mode: 'Markdown'
         })
     })
